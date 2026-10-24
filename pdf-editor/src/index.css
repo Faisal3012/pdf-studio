@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* ─── Premium Design System Tokens ─────────────────────────────────────────── */
+:root {
+  /* Light Theme — Warm Ivory, Deep Forest-Green, Champagne-Gold */
+  --app-bg: #F5F2EA;
+  --workspace-bg: #EAE6DC;
+  --panel-bg: #FFFEFA;
+  --text-primary: #202820;
+  --text-secondary: #73776E;
+  --brand-primary: #23483B;
+  --brand-hover: #19392F;
+  --brand-accent: #C3A46B;
+  --border-subtle: #DEDCCF;
+  --selection-hover: #E5EDE6;
+  --color-success: #347454;
+  --color-warning: #B77C30;
+  --color-error: #B94B45;
+
+  --color-brand: var(--brand-primary);
+  --color-brand-hover: var(--brand-hover);
+}
+
+.dark {
+  /* Dark Theme — Deep Forest Night, Obsidian, Champagne Accents */
+  --app-bg: #171C19;
+  --workspace-bg: #202722;
+  --panel-bg: #262E29;
+  --text-primary: #F0F0E8;
+  --text-secondary: #ADB5AA;
+  --brand-primary: #A7C4AD;
+  --brand-hover: #C2D8C6;
+  --brand-accent: #D2B77E;
+  --border-subtle: #39443C;
+  --selection-hover: #2D3831;
+  --color-success: #438E6A;
+  --color-warning: #D69747;
+  --color-error: #D9625C;
+
+  --color-brand: var(--brand-primary);
+  --color-brand-hover: var(--brand-hover);
+}
+
+body {
+  background-color: var(--app-bg);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth theme transitions */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Remove transition on elements that shouldn't animate */
+img, video, canvas {
+  transition: none;
+}
+
+/* Accessible focus styling */
+:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 2px;
+}
+
+/* Refined scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
